@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<button id="btnPlay">paly</button>
+	<button id="btnPause">pause</button>
+	<button id="btnEnd">end</button>
+	<button id="when">when</button>
+	<audio src="http://dl.stream.qqmusic.qq.com/C400002E3MtF0IAMMY.m4a?vkey=393072E3E6BCBE6EED00B39CAD0F75FB9B0D8A5B5124FC2319442F051509F2CED0E49EC494CDD823FAD6141BDC858B32A4404EC5974A6BDF&guid=7085573444&uin=0&fromtag=66" controls></audio>
+	<p id="text"></p>
+	<script type="text/javascript">
+		let audio = document.createElement('audio');
+		audio.src = "http://dl.stream.qqmusic.qq.com/C400002E3MtF0IAMMY.m4a?vkey=393072E3E6BCBE6EED00B39CAD0F75FB9B0D8A5B5124FC2319442F051509F2CED0E49EC494CDD823FAD6141BDC858B32A4404EC5974A6BDF&guid=7085573444&uin=0&fromtag=66";
+
+		document.getElementById('btnPlay').onclick = function(){
+			audio.play();
+		}
+		document.getElementById('btnPause').onclick = function(){
+			audio.pause();
+		}
+		document.getElementById('btnEnd').onclick = function(){
+			audio.pause();
+		}
+		document.getElementById('when').onclick = function(){
+			console.log(audio.currentTime);
+		}
+		audio.oncanplay = function(){
+			console.log('ok');
+		}
+		
+	</script>
+</body>
+</html>
