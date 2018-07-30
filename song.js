@@ -20,7 +20,7 @@ $(function(){
 		})
 	})
 	let audio = document.createElement('audio')
-	audio.src = "http://dl.stream.qqmusic.qq.com/C400002E3MtF0IAMMY.m4a?vkey=393072E3E6BCBE6EED00B39CAD0F75FB9B0D8A5B5124FC2319442F051509F2CED0E49EC494CDD823FAD6141BDC858B32A4404EC5974A6BDF&guid=7085573444&uin=0&fromtag=66";
+	audio.src = "https://dl.stream.qqmusic.qq.com/C400002E3MtF0IAMMY.m4a?vkey=393072E3E6BCBE6EED00B39CAD0F75FB9B0D8A5B5124FC2319442F051509F2CED0E49EC494CDD823FAD6141BDC858B32A4404EC5974A6BDF&guid=7085573444&uin=0&fromtag=66";
 	audio.oncanplay = function(){
 		audio.play()
 		$('.disc-container').addClass('playing')
