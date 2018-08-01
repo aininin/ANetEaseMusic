@@ -44,12 +44,14 @@
 	width: 25.5vw;
 	position: absolute;
 	left: 46vw;
+	z-index: 5;
 }
 .disc-container .disc{
 	display: flex;
 	justify-content: center;
 	align-items: center;
 	margin-top: 18vw;
+	position: relative;
 }
 .disc-container .icon{
 	width: 15vw;
