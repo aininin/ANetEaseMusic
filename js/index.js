@@ -1,7 +1,8 @@
 $(function(){
 	$.get('./songs.json').then(function(response){
 		//response是字符串,github服务器
-		let items = JSON.parse(response);
+		// let items = JSON.parse(response);
+		let items = response;
 		items.forEach( (i)=> {
 			let $li = $(`<li>
 							<a href="./song.html?id=${i.id}">
