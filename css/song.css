@@ -16,7 +16,7 @@
 	height: 100wh;
 }
 .page .bg-img{
-	background: url("//music.163.com/api/img/blur/18587244069235039") no-repeat center;
+	background: url("") no-repeat center;
 	background-size: auto 100%;
 	opacity: 1;
 	z-index: -1;
@@ -82,9 +82,11 @@
 	position: absolute;
 	border-radius: 50%;
 	display: block;
+	animation: circle 20s infinite linear;
+	animation-play-state: paused;
 }
 .disc-container.playing .light,.disc-container.playing .cover{
-	animation: circle 20s infinite linear;
+	animation-play-state: running;
 }
 .disc-container .icon-pause{
 	display: none;
