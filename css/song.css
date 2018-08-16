@@ -71,6 +71,9 @@
 	display: flex;
 	justify-content: center;
 	align-items: center;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%,-50%);
 }
 .disc-container .ring{
 	width: 80vw;
@@ -78,6 +81,9 @@
 .disc-container .light{
 	width: 80vw;
 	position: absolute;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%,-50%);
 }
 .disc-container .cover{
 	width: 50vw;
@@ -119,7 +125,7 @@
 	line-height: 30px;
 	color: hsla(0,0%,100%,.6);
 }
-.song-description p:active{
+.song-description p.active{
 	color: #fff;
 }
 .song-description .lyric{
@@ -129,6 +135,7 @@
 }
 .song-description .lines{
 	line-height: 1.5;
+	transition: transform 0.3s;
 }
 .page>.links{
 	display: flex;
