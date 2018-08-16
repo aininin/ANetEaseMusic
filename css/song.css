@@ -13,7 +13,7 @@
 .page{
 	display: flex;
 	flex-direction: column;
-	height: 100wh;
+	height: 100vh;
 }
 .page .bg-img{
 	background: url("") no-repeat center;
@@ -44,7 +44,7 @@
 	width: 25.5vw;
 	position: absolute;
 	left: 46vw;
-	z-index: 5;
+	z-index: 1;
 }
 .disc-container .disc{
 	display: flex;
@@ -88,6 +88,8 @@
 .disc-container .cover{
 	width: 50vw;
 	position: absolute;
+	left: calc(50%-25vw);
+	top: calc(50%-25vw);
 	border-radius: 50%;
 	display: block;
 	animation: circle 20s infinite linear;

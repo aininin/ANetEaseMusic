@@ -53,24 +53,30 @@ section>h2:first-child{
 	right: -1.3vw;
 	border-bottom: 2px solid #d33a31;
 }
-.playlists{
+.tabContent > li{
+	display: none;
+}
+.tabContent > li.active{
+	display: block;
+}
+.tab1 .playlists{
 	margin-top: 5vw;
 }
-.playlists ul{
+.tab1 .playlists ul{
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: space-between;
 	font-size: 0.93em;
 }
-.playlists ul img{
+.tab1 .playlists ul img{
 	width: 100%;
 }
-.playlists ul > li{
+.tab1 .playlists ul > li{
 	position: relative;
 	width: 32.9%;
 	margin-bottom: 4vw;
 }
-.playlists ul > li p{
+.tab1 .playlists ul > li p{
 	padding: 0 1.4vw;
 	display: -webkit-box;
 	line-height: 4vw;
@@ -80,7 +86,7 @@ section>h2:first-child{
 	overflow: hidden;
 	text-overflow: ellipsis;
 }
-.playlists ul > li .u-earp{
+.tab1 .playlists ul > li .u-earp{
 	position: absolute;
 	right: 1vw;
 	top: 0.2vw;
@@ -90,50 +96,53 @@ section>h2:first-child{
 	display: flex;
 	justify-content: center;
 }
-.playlists ul > li .u-earp .icon-earp{
+.tab1 .playlists ul > li .u-earp .icon-earp{
 	width: 3.2vw;
 	height: 3.2vw;
 	fill: #fff;
-	margin: 0.8vw 1vw 0 0;
+	margin: 0.6vw 1vw 0 0;
 }
-.latestMusic{}
-.latestMusic > p{text-align: center;}
-.latestMusic > ol{
+.tab1 .playlists ul > li .u-earp .earp-num{
+	font-size: 3vw;
+}
+.tab1 .latestMusic{}
+.tab1 .latestMusic > p{text-align: center;}
+.tab1 .latestMusic > ol{
 	padding-left: 3vw;
 }
-.latestMusic > ol > li{
+.tab1 .latestMusic > ol > li{
 	position: relative;
 	font-size: 3.6vw;
 	border-bottom: 1px solid rgba(0,0,0,.05);
 	padding: 2vw 0 0.5vw 0;
 }
-.latestMusic > ol > li a{
+.tab1 .latestMusic > ol > li a{
 	text-decoration: none;
 	color: inherit;
 }
-.latestMusic ol > li > h3 > span{
+.tab1 .latestMusic ol > li > h3 > span{
 	color: #888;
 }
-.latestMusic > ol > li p{
+.tab1 .latestMusic > ol > li p{
 	display: flex;
 	align-items: center;
 	color: #888;
 	margin: 1.3vw 0;
 }
-.latestMusic > ol > li p > span{
+.tab1 .latestMusic > ol > li p > span{
 	font-size: 3vw;
 	width: 80vw;
 	overflow: hidden;
 	white-space: nowrap;
 	text-overflow: ellipsis;
 }
-.latestMusic > ol > li p svg.icon-sq{
+.tab1 .latestMusic > ol > li p svg.icon-sq{
 	width: 4vw;
 	height: 4vw;
 	margin-right: 0.2em;
 	fill: #fe672e;
 }
-.latestMusic > ol > li a svg.icon-play-circle{
+.tab1 .latestMusic > ol > li a svg.icon-play-circle{
 	width: 5.9vw;
 	height: 5.9vw;
 	position: absolute;
@@ -142,17 +151,17 @@ section>h2:first-child{
 	transform: translateY(-50%);
 	fill: #aaa;
 }
-section.art{
+.tab1 section.art{
 	background: transparent url(https://s3.music.126.net/m/s/img/recommand_bg_2x.png?d045fafc60e017b653f8065a87496922) no-repeat center 0;
 	padding: 18vw 0 5vw 0;
 }
-section.art .logo{
+.tab1 section.art .logo{
 	text-align: center;
 }
-section.art .logo .logosvg{
+.tab1 section.art .logo .logosvg{
 	width: 61vw;
 }
-section.art .openApp{
+.tab1 section.art .openApp{
 	display: block;
 	max-width: 80vw;
 	padding: 1vw 0;
@@ -165,10 +174,12 @@ section.art .openApp{
 	line-height: 8vw;
 	border-radius: 5vw;
 }
-section.art .copyright{
+.tab1 section.art .copyright{
 	font-size: 3.2vw;
 	transform: scale(0.75);
 	text-align: center;
 	color: #888;
 	letter-spacing: -0.2px;
 }
+.tab3 #searchSong{}
+.tab3 #searchResult{}

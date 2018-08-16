@@ -2,8 +2,8 @@ $(function(){
 	let id = parseInt(location.search.match(/\bid=([^$]*)/)[1]);
 
 	$.get('./songs.json').then(function(response){
-		//let songs = JSON.parse(response);
-		let songs = response;
+		let songs = JSON.parse(response);
+		//let songs = response;
 		let song = songs.filter((s)=>s.id === id)[0];
 		let {url,name,singer,coverImg,bgImg,lyric} = song;
 		initPlayer(url)
