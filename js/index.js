@@ -2,8 +2,8 @@ $(function(){
 	setTimeout(function(){
 		$.get('./songs.json').then(function(response){
 			//response是字符串,github服务器
-			let items = JSON.parse(response);
-			//let items = response;
+			//let items = JSON.parse(response);
+			let items = response;
 			items.forEach( (i)=> {
 				//动态添加li元素
 				let $li = $(`<li>
