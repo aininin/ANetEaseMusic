@@ -81,9 +81,10 @@
 .disc-container .disc .light{
 	width: 80vw;
 	position: absolute;
-	left: 50%;
-	top: 50%;
-	transform: translate(-50%,-50%);
+	left: calc(50% - 40vw);
+	top: calc(50% - 40vw);
+	animation: circle 20s infinite linear;
+	animation-play-state: paused;
 }
 .disc-container .disc .cover{
 	width: 50vw;
