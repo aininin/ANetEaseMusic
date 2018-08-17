@@ -78,26 +78,36 @@
 .disc-container .disc .ring{
 	width: 80vw;
 }
-.disc-container .disc .light{
+.disc-container .disc #animateContainer{
+	width: 80vw;
+	height: 80vw;
+	position: absolute;
+	left: calc(50% - 40vw);
+	top: calc(50% - 40vw);
+}
+.disc-container .disc #animateContainer .light{
 	width: 80vw;
 	position: absolute;
 	left: calc(50% - 40vw);
 	top: calc(50% - 40vw);
-	animation: circle 20s infinite linear;
-	animation-play-state: paused;
+	/*animation: circle 20s infinite linear;
+	animation-play-state: paused;*/
 }
-.disc-container .disc .cover{
+.disc-container .disc #animateContainer .cover{
 	width: 50vw;
 	position: absolute;
 	left: calc(50% - 25vw);
 	top: calc(50% - 25vw);
 	border-radius: 50%;
 	display: block;
-	animation: circle 20s infinite linear;
-	animation-play-state: paused;
+	/*animation: circle 20s infinite linear;
+	animation-play-state: paused;*/
 }
-.disc-container.playing .light,.disc-container.playing .cover{
+/*.disc-container.playing .light,.disc-container.playing .cover{
 	animation-play-state: running;
+}*/
+.animate{
+	animation: circle 20s infinite linear;
 }
 .disc-container .icon-pause{
 	display: none;
@@ -165,4 +175,20 @@
 .page>.links>a.download{
 	background: #d43b32;
 	color: #fff;
+}
+
+@-webkit-keyframes circle{
+	100% {
+		transform: rotate(1turn);
+	}
+}
+@-moz-keyframes circle{
+	100% {
+		transform: rotate(1turn);
+	}
+}
+@-o-keyframes circle{
+	100% {
+		transform: rotate(1turn);
+	}
 }

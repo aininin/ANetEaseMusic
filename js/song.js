@@ -1,6 +1,6 @@
 $(function(){
 	let id = parseInt(location.search.match(/\bid=([^$]*)/)[1]);
-
+	let isPlaying = false;
 	$.get('./songs.json').then(function(response){
 		//let songs = JSON.parse(response);
 		let songs = response;
@@ -12,18 +12,34 @@ $(function(){
 	//初始化播放器
 	function initPlayer(url){
 		let audio = document.createElement('audio')
+		let light = document.getElementById('light');
+		let cover = document.getElementById('cover');
+		let ac = document.getElementById('animateContainer');
 		audio.src = url;
 		audio.oncanplay = function(){
 			audio.play()
 			$('.disc-container').addClass('playing')
+			isPlaying = true;
+			$('#light').addClass('animate')
+			$('#cover').addClass('animate')
 		}
 		$('.icon-pause').on('click',function(){
 			audio.pause()
 			$('.disc-container').removeClass('playing')
+			isPlaying = false;
+			//利用父元素transform达到子元素animation的完美兼容
+			var iTransform = getComputedStyle(light).transform;
+			var cTransform = getComputedStyle(ac).transform;
+			ac.style.transform = cTransform === 'none'?iTransform:iTransform.concat(' ',cTransform);
+			$('#light').removeClass('animate');
+			$('#cover').removeClass('animate');
 		})
 		$('.icon-play').on('click',function(){
 			audio.play()
 			$('.disc-container').addClass('playing')
+			isPlaying = true;
+			$('#light').addClass('animate')
+			$('#cover').addClass('animate')
 		})
 		//当前歌词显示
 		setInterval(function(){
