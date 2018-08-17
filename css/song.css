@@ -88,8 +88,8 @@
 .disc-container .disc .cover{
 	width: 50vw;
 	position: absolute;
-	left: calc(50%-25vw);
-	top: calc(50%-25vw);
+	left: calc(50% - 25vw);
+	top: calc(50% - 25vw);
 	border-radius: 50%;
 	display: block;
 	animation: circle 20s infinite linear;
